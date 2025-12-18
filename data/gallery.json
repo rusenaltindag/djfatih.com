@@ -1,0 +1,52 @@
+{
+    "gallery": [
+        {
+            "id": 1,
+            "image": "https://images.unsplash.com/photo-1571266028243-e4733b0f0bb0?w=800",
+            "title": "Klein Turkuaz",
+            "venue": "Klein Turkuaz",
+            "date": "Kasım 2024",
+            "event": "Techno Night"
+        },
+        {
+            "id": 2,
+            "image": "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=800",
+            "title": "Sunset Party",
+            "venue": "360 Istanbul",
+            "date": "Ekim 2024",
+            "event": "Sunset Sessions"
+        },
+        {
+            "id": 3,
+            "image": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=800",
+            "title": "Warehouse Rave",
+            "venue": "Warehouse",
+            "date": "Eylül 2024",
+            "event": "Underground Night"
+        },
+        {
+            "id": 4,
+            "image": "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=800",
+            "title": "Beach Festival",
+            "venue": "Bodrum",
+            "date": "Ağustos 2024",
+            "event": "Summer Festival"
+        },
+        {
+            "id": 5,
+            "image": "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=800",
+            "title": "Club Performance",
+            "venue": "Indigo",
+            "date": "Temmuz 2024",
+            "event": "Weekly Residency"
+        },
+        {
+            "id": 6,
+            "image": "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=800",
+            "title": "Open Air Event",
+            "venue": "Zorlu PSM",
+            "date": "Haziran 2024",
+            "event": "Open Air Series"
+        }
+    ]
+}

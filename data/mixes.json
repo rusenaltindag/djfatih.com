@@ -1,0 +1,103 @@
+{
+    "mixes": [
+        {
+            "id": 1,
+            "title": "Çıt Çıt Çedene - Barış Manço",
+            "genre": "nostalji",
+            "duration": "00:32",
+            "date": "2024-12-01",
+            "artwork": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHLiHsWnFC9m8fVCHIVnr9Fv9F7L_OzIegZw&s",
+            "previewUrl": "./mp3/baris-manco-cit-cit-cedene.mp3",
+            "fullLink": "https://soundcloud.com/djfatih/istanbul-nights-vol1",
+            "description": "Çıt Çıt Çedene - Barış Manço remix by Dj Fatih From Istanbul"
+        },
+        {
+            "id": 2,
+            "title": "Bosphorus Sunset Session",
+            "genre": "house",
+            "duration": "58:15",
+            "date": "2024-11-15",
+            "artwork": "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400",
+            "previewUrl": "./mp3/bosphorus-sunset-session.mp3",
+            "fullLink": "https://soundcloud.com/djfatih/bosphorus-sunset-session",
+            "description": "Warm house vibes for golden hour moments"
+        },
+        {
+            "id": 3,
+            "title": "Midnight Express",
+            "genre": "techno",
+            "duration": "1:45:00",
+            "date": "2024-11-01",
+            "artwork": "https://images.unsplash.com/photo-1598387181032-a3103a2db5b3?w=400",
+            "previewUrl": "./mp3/midnight-express.mp3",
+            "fullLink": "https://www.youtube.com/watch?v=example1",
+            "description": "Dark and hypnotic techno ride"
+        },
+        {
+            "id": 4,
+            "title": "Euphoria",
+            "genre": "progressive",
+            "duration": "1:30:20",
+            "date": "2024-10-20",
+            "artwork": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=400",
+            "previewUrl": "./mp3/euphoria.mp3",
+            "fullLink": "https://soundcloud.com/djfatih/euphoria",
+            "description": "Progressive journey to euphoria"
+        },
+        {
+            "id": 5,
+            "title": "Deep Connection",
+            "genre": "melodic",
+            "duration": "1:12:45",
+            "date": "2024-10-10",
+            "artwork": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=400",
+            "previewUrl": "./mp3/deep-connection.mp3",
+            "fullLink": "https://www.youtube.com/watch?v=example2",
+            "description": "Melodic techno for the soul"
+        },
+        {
+            "id": 6,
+            "title": "Summer Terrace Mix",
+            "genre": "house",
+            "duration": "2:00:00",
+            "date": "2024-09-15",
+            "artwork": "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=400",
+            "previewUrl": "./mp3/summer-terrace-mix.mp3",
+            "fullLink": "https://soundcloud.com/djfatih/summer-terrace-mix",
+            "description": "Perfect soundtrack for summer rooftops"
+        },
+        {
+            "id": 7,
+            "title": "Warehouse Sessions",
+            "genre": "techno",
+            "duration": "1:55:30",
+            "date": "2024-09-01",
+            "artwork": "https://images.unsplash.com/photo-1504898770365-14faca6a7320?w=400",
+            "previewUrl": "./mp3/warehouse-sessions.mp3",
+            "fullLink": "https://soundcloud.com/djfatih/warehouse-sessions",
+            "description": "Raw warehouse techno energy"
+        },
+        {
+            "id": 8,
+            "title": "Afterhours Meditation",
+            "genre": "melodic",
+            "duration": "1:40:00",
+            "date": "2024-08-20",
+            "artwork": "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=400",
+            "previewUrl": "./mp3/afterhours-meditation.mp3",
+            "fullLink": "https://www.youtube.com/watch?v=example3",
+            "description": "Ethereal melodic techno for late nights"
+        },
+        {
+            "id": 9,
+            "title": "Festival Anthem Mix",
+            "genre": "progressive",
+            "duration": "1:20:00",
+            "date": "2024-08-01",
+            "artwork": "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=400",
+            "previewUrl": "./mp3/festival-anthem-mix.mp3",
+            "fullLink": "https://soundcloud.com/djfatih/festival-anthem-mix",
+            "description": "Peak time festival energy"
+        }
+    ]
+}
