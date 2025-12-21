@@ -759,10 +759,10 @@ function handleFormSubmit(e) {
     const formData = new FormData(form);
 
     // Basic validation
-    const name = formData.get('name').trim();
-    const email = formData.get('email').trim();
-    const subject = formData.get('subject');
-    const message = formData.get('message').trim();
+    const name = formData.get('Isim').trim();
+    const email = formData.get('E-posta').trim();
+    const subject = formData.get('Konu');
+    const message = formData.get('Mesaj').trim();
 
     let isValid = true;
     let errorMessage = '';
@@ -786,13 +786,40 @@ function handleFormSubmit(e) {
         return;
     }
 
-    // Simulate form submission
+    // Show loading state
     showFormMessage('Mesajınız gönderiliyor...', 'info');
+    const submitBtn = form.querySelector('button[type="submit"]');
+    if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<span>Gönderiliyor...</span>';
+    }
 
-    setTimeout(() => {
-        showFormMessage('Mesajınız başarıyla gönderildi! En kısa sürede size dönüş yapacağız.', 'success');
-        form.reset();
-    }, 1500);
+    // Submit to FormSubmit via fetch
+    fetch(form.action, {
+        method: 'POST',
+        body: formData,
+        headers: {
+            'Accept': 'application/json'
+        }
+    })
+        .then(response => {
+            if (response.ok) {
+                showFormMessage('Mesajınız başarıyla gönderildi! En kısa sürede size dönüş yapacağız.', 'success');
+                form.reset();
+            } else {
+                throw new Error('Form gönderilemedi');
+            }
+        })
+        .catch(error => {
+            showFormMessage('Bir hata oluştu. Lütfen tekrar deneyin.', 'error');
+        })
+        .finally(() => {
+            if (submitBtn) {
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = '<span>Gönder</span><i data-lucide="send" class="w-5 h-5"></i>';
+                lucide.createIcons();
+            }
+        });
 }
 
 function isValidEmail(email) {
@@ -802,9 +829,9 @@ function isValidEmail(email) {
 
 function showFormMessage(message, type) {
     elements.formMessage.textContent = message;
-    elements.formMessage.className = `text-center py-3 rounded-xl ${type === 'success' ? 'form-success' :
-        type === 'error' ? 'form-error' :
-            'bg-accent-gold/10 text-accent-gold border border-accent-gold/30'
+    elements.formMessage.className = `text-center py-3 rounded-xl ${type === 'success' ? 'bg-purple-900/30 text-purple-300 border border-purple-500/30' :
+        type === 'error' ? 'bg-purple-900/20 text-purple-200 border border-purple-400/30' :
+            'bg-purple-900/20 text-purple-300 border border-purple-500/30'
         }`;
     elements.formMessage.classList.remove('hidden');
 
@@ -833,9 +860,9 @@ function showToast(message, type = 'info', duration = 4000) {
         transform translate-x-full opacity-0 transition-all duration-300 ease-out
         max-w-sm p-4 rounded-xl shadow-2xl backdrop-blur-lg border
         flex items-center gap-3
-        ${type === 'success' ? 'bg-green-900/90 border-green-500/30 text-green-100' :
-            type === 'error' ? 'bg-red-900/90 border-red-500/30 text-red-100' :
-                'bg-dark-800/90 border-accent-gold/30 text-white'}
+        ${type === 'success' ? 'bg-purple-900/90 border-purple-500/30 text-purple-100' :
+            type === 'error' ? 'bg-purple-800/90 border-purple-400/30 text-purple-100' :
+                'bg-purple-900/90 border-purple-500/30 text-purple-100'}
     `;
 
     const iconSvg = type === 'success'
