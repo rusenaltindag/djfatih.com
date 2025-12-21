@@ -521,19 +521,50 @@ function formatTime(seconds) {
 function initGallery() {
     const swiperWrapper = document.querySelector('.gallery-swiper .swiper-wrapper');
 
-    // Populate gallery slides
-    swiperWrapper.innerHTML = galleryData.map((item, index) => `
-        <div class="swiper-slide">
-            <div class="gallery-slide aspect-[4/3]" data-index="${index}">
-                <img src="${item.image}" alt="${item.title}" loading="lazy">
-                <div class="overlay">
-                    <span class="text-accent-gold text-sm font-medium">${item.event}</span>
-                    <h4 class="font-heading font-semibold text-lg mt-1">${item.venue}</h4>
-                    <p class="text-sm text-gray-400">${item.date}</p>
+    // Populate gallery slides with support for images and videos
+    // All items use uniform square aspect ratio for consistency
+    swiperWrapper.innerHTML = galleryData.map((item, index) => {
+        const isVideo = item.type === 'video';
+        const previewSrc = item.preview || item.src;
+
+        if (isVideo) {
+            return `
+                <div class="swiper-slide">
+                    <div class="gallery-slide aspect-square relative group" data-index="${index}" data-type="video">
+                        <img 
+                            src="${previewSrc}" 
+                            alt="${item.title}"
+                            loading="lazy"
+                            class="w-full h-full object-cover"
+                        >
+                        <div class="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/50 transition-colors">
+                            <button class="video-play-btn w-16 h-16 rounded-full bg-accent-gold/90 flex items-center justify-center text-dark-900 hover:scale-110 transition-transform">
+                                <svg class="w-8 h-8 ml-1" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M8 5v14l11-7z"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="overlay">
+                            <span class="text-accent-gold text-sm font-medium">${item.venue || ''}</span>
+                            <h4 class="font-heading font-semibold text-lg mt-1">${item.title}</h4>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
-    `).join('');
+            `;
+        } else {
+            return `
+                <div class="swiper-slide">
+                    <div class="gallery-slide aspect-square" data-index="${index}" data-type="image">
+                        <img src="${previewSrc}" alt="${item.title}" loading="lazy" class="w-full h-full object-cover">
+                        <div class="overlay">
+                            <span class="text-accent-gold text-sm font-medium">${item.venue || ''}</span>
+                            <h4 class="font-heading font-semibold text-lg mt-1">${item.title}</h4>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+    }).join('');
 
     // Initialize Swiper
     elements.gallerySwiper = new Swiper('.gallery-swiper', {
@@ -547,9 +578,6 @@ function initGallery() {
         pagination: {
             el: '.swiper-pagination-custom',
             clickable: true,
-            renderBullet: function (index, className) {
-                return `<span class="${className}"></span>`;
-            },
         },
         navigation: {
             nextEl: '.swiper-button-next-custom',
@@ -567,11 +595,61 @@ function initGallery() {
 
     // Add click listeners to gallery slides
     document.querySelectorAll('.gallery-slide').forEach(slide => {
-        slide.addEventListener('click', () => {
+        slide.addEventListener('click', (e) => {
             const index = parseInt(slide.dataset.index);
             openLightbox(index);
         });
     });
+
+    // Add video play button listeners - opens lightbox and plays video
+    document.querySelectorAll('.video-play-btn').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const slide = btn.closest('.gallery-slide');
+            const index = parseInt(slide.dataset.index);
+            openLightbox(index);
+        });
+    });
+}
+
+// Toggle video play/pause in gallery
+function toggleGalleryVideo(slide) {
+    const video = slide.querySelector('video');
+    const playBtn = slide.querySelector('.video-play-btn');
+
+    if (!video || !playBtn) return;
+
+    if (video.paused) {
+        // Pause all other videos first
+        document.querySelectorAll('.gallery-slide video').forEach(v => {
+            if (v !== video) {
+                v.pause();
+                const otherBtn = v.closest('.gallery-slide').querySelector('.video-play-btn');
+                if (otherBtn) {
+                    otherBtn.innerHTML = '<svg class="w-8 h-8 ml-1" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>';
+                    otherBtn.parentElement.classList.remove('opacity-0');
+                }
+            }
+        });
+
+        video.play();
+        playBtn.innerHTML = '<svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>';
+        playBtn.parentElement.classList.add('opacity-0', 'hover:opacity-100');
+
+        // Pause swiper autoplay while video plays
+        if (elements.gallerySwiper) {
+            elements.gallerySwiper.autoplay.stop();
+        }
+    } else {
+        video.pause();
+        playBtn.innerHTML = '<svg class="w-8 h-8 ml-1" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>';
+        playBtn.parentElement.classList.remove('opacity-0');
+
+        // Resume swiper autoplay
+        if (elements.gallerySwiper) {
+            elements.gallerySwiper.autoplay.start();
+        }
+    }
 }
 
 // ===================================
@@ -609,6 +687,12 @@ function openLightbox(index) {
 function closeLightbox() {
     elements.lightbox.classList.remove('active');
     document.body.style.overflow = '';
+
+    // Pause any playing video in lightbox
+    const lightboxVideo = elements.lightbox.querySelector('video');
+    if (lightboxVideo) {
+        lightboxVideo.pause();
+    }
 }
 
 function lightboxPrevious() {
@@ -627,10 +711,38 @@ function lightboxNext() {
 
 function updateLightboxContent() {
     const item = galleryData[state.galleryIndex];
-    elements.lightboxImage.src = item.image;
-    elements.lightboxImage.alt = item.title;
-    elements.lightboxTitle.textContent = `${item.venue} - ${item.event}`;
-    elements.lightboxMeta.textContent = item.date;
+    const isVideo = item.type === 'video';
+    const mediaContainer = document.getElementById('lightbox-media-container');
+
+    // Clear any existing video
+    const existingVideo = mediaContainer.querySelector('video');
+    if (existingVideo) {
+        existingVideo.remove();
+    }
+
+    if (isVideo) {
+        // Hide the image and show video
+        elements.lightboxImage.style.display = 'none';
+
+        const video = document.createElement('video');
+        video.src = item.src;
+        video.className = 'max-h-[80vh] max-w-full rounded-lg';
+        video.controls = true;
+        video.autoplay = true;
+        video.loop = true;
+        video.playsInline = true;
+
+        // Insert video before the image element
+        mediaContainer.insertBefore(video, elements.lightboxImage);
+    } else {
+        // Show the image
+        elements.lightboxImage.style.display = '';
+        elements.lightboxImage.src = item.src || item.image;
+        elements.lightboxImage.alt = item.title;
+    }
+
+    elements.lightboxTitle.textContent = `${item.title}${item.venue ? ' - ' + item.venue : ''}`;
+    elements.lightboxMeta.textContent = item.date || '';
 }
 
 // ===================================
@@ -696,12 +808,150 @@ function showFormMessage(message, type) {
         }`;
     elements.formMessage.classList.remove('hidden');
 
-    if (type === 'success' || type === 'error') {
+    if (type === 'success') {
+        // Show toast for success
+        showToast('Mesajınız başarıyla gönderildi! En kısa sürede size dönüş yapacağız.', 'success');
+        setTimeout(() => {
+            elements.formMessage.classList.add('hidden');
+        }, 3000);
+    } else if (type === 'error') {
         setTimeout(() => {
             elements.formMessage.classList.add('hidden');
         }, 5000);
     }
 }
+
+// ===================================
+// Toast Notification System
+// ===================================
+function showToast(message, type = 'info', duration = 4000) {
+    const container = document.getElementById('toast-container');
+    if (!container) return;
+
+    const toast = document.createElement('div');
+    toast.className = `
+        transform translate-x-full opacity-0 transition-all duration-300 ease-out
+        max-w-sm p-4 rounded-xl shadow-2xl backdrop-blur-lg border
+        flex items-center gap-3
+        ${type === 'success' ? 'bg-green-900/90 border-green-500/30 text-green-100' :
+            type === 'error' ? 'bg-red-900/90 border-red-500/30 text-red-100' :
+                'bg-dark-800/90 border-accent-gold/30 text-white'}
+    `;
+
+    const iconSvg = type === 'success'
+        ? '<svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>'
+        : type === 'error'
+            ? '<svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>'
+            : '<svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>';
+
+    toast.innerHTML = `
+        ${iconSvg}
+        <span class="text-sm font-medium">${message}</span>
+        <button onclick="this.parentElement.remove()" class="ml-auto p-1 hover:bg-white/10 rounded transition-colors">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+        </button>
+    `;
+
+    container.appendChild(toast);
+
+    // Animate in
+    requestAnimationFrame(() => {
+        toast.classList.remove('translate-x-full', 'opacity-0');
+    });
+
+    // Auto remove
+    setTimeout(() => {
+        toast.classList.add('translate-x-full', 'opacity-0');
+        setTimeout(() => toast.remove(), 300);
+    }, duration);
+}
+
+// ===================================
+// Copy Email Function (iOS Compatible)
+// ===================================
+function copyEmail() {
+    const emailText = document.getElementById('email-text');
+    const copyBtn = document.getElementById('copy-email-btn');
+
+    if (!emailText) return;
+
+    const email = emailText.textContent;
+
+    // iOS-compatible copy function
+    function copyToClipboard(text) {
+        // Try modern Clipboard API first
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+            return navigator.clipboard.writeText(text);
+        }
+
+        // Fallback for iOS and older browsers
+        return new Promise((resolve, reject) => {
+            const textArea = document.createElement('textarea');
+            textArea.value = text;
+
+            // Avoid scrolling to bottom on iOS
+            textArea.style.position = 'fixed';
+            textArea.style.top = '0';
+            textArea.style.left = '0';
+            textArea.style.width = '2em';
+            textArea.style.height = '2em';
+            textArea.style.padding = '0';
+            textArea.style.border = 'none';
+            textArea.style.outline = 'none';
+            textArea.style.boxShadow = 'none';
+            textArea.style.background = 'transparent';
+            textArea.style.fontSize = '16px'; // Prevent iOS zoom
+
+            document.body.appendChild(textArea);
+            textArea.focus();
+            textArea.select();
+
+            // iOS specific: use setSelectionRange
+            textArea.setSelectionRange(0, text.length);
+
+            try {
+                const successful = document.execCommand('copy');
+                document.body.removeChild(textArea);
+                if (successful) {
+                    resolve();
+                } else {
+                    reject();
+                }
+            } catch (err) {
+                document.body.removeChild(textArea);
+                reject(err);
+            }
+        });
+    }
+
+    copyToClipboard(email).then(() => {
+        showToast('E-posta adresi kopyalandı!', 'success', 2000);
+
+        // Visual feedback on button
+        if (copyBtn) {
+            const originalHTML = copyBtn.innerHTML;
+            copyBtn.innerHTML = '<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span class="hidden sm:inline">Kopyalandı!</span>';
+            copyBtn.classList.add('bg-green-600', 'text-white');
+            copyBtn.classList.remove('bg-dark-600');
+
+            setTimeout(() => {
+                copyBtn.innerHTML = originalHTML;
+                copyBtn.classList.remove('bg-green-600', 'text-white');
+                copyBtn.classList.add('bg-dark-600');
+                // Re-init lucide icons for the button
+                if (typeof lucide !== 'undefined') {
+                    lucide.createIcons();
+                }
+            }, 2000);
+        }
+    }).catch(() => {
+        // If copy fails, show the email in an alert so user can manually copy
+        showToast('Kopyalamak için e-postayı basılı tutun: ' + email, 'info', 4000);
+    });
+}
+
+// Make copyEmail global
+window.copyEmail = copyEmail;
 
 // ===================================
 // Scroll Animations

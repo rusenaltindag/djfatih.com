@@ -237,10 +237,10 @@ body {
 
 .mix-list-item {
     display: grid;
-    grid-template-columns: 40px 48px 1fr auto auto auto;
+    grid-template-columns: 32px 40px minmax(0, 1fr) 40px;
     align-items: center;
-    gap: 12px;
-    padding: 10px 16px;
+    gap: 20px;
+    padding: 8px 12px;
     background: rgba(26, 26, 26, 0.6);
     cursor: pointer;
     transition: all 0.2s ease;
@@ -356,9 +356,9 @@ body {
     text-align: right;
 }
 
-/* External Link */
+/* External Link - hidden on mobile */
 .mix-list-link {
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     width: 32px;
@@ -436,6 +436,7 @@ body {
     }
 
     .mix-list-link {
+        display: flex;
         opacity: 0;
     }
 }
@@ -483,14 +484,16 @@ body {
     position: relative;
 }
 
-.gallery-slide img {
+.gallery-slide img,
+.gallery-slide video {
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: transform 0.5s ease;
 }
 
-.gallery-slide:hover img {
+.gallery-slide:hover img,
+.gallery-slide:hover video {
     transform: scale(1.05);
 }
 
@@ -504,6 +507,7 @@ body {
     flex-direction: column;
     justify-content: flex-end;
     padding: 1.5rem;
+    pointer-events: none;
 }
 
 .gallery-slide:hover .overlay {
@@ -512,23 +516,43 @@ body {
 
 /* Swiper customization */
 .swiper-pagination-custom {
-    display: flex;
-    gap: 8px;
+    display: none;
+    gap: 6px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 16px;
+}
+
+/* Show dots only on tablet and desktop */
+@media (min-width: 768px) {
+    .swiper-pagination-custom {
+        display: flex;
+    }
 }
 
 .swiper-pagination-custom .swiper-pagination-bullet {
-    width: 8px;
-    height: 8px;
-    background: rgba(255, 255, 255, 0.3);
+    width: 10px;
+    height: 10px;
+    min-width: 10px;
+    min-height: 10px;
+    background: rgba(255, 255, 255, 0.4);
     border-radius: 50%;
     cursor: pointer;
     transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    flex-shrink: 0;
+}
+
+.swiper-pagination-custom .swiper-pagination-bullet:hover {
+    background: rgba(167, 139, 250, 0.6);
 }
 
 .swiper-pagination-custom .swiper-pagination-bullet-active {
     background: #A78BFA;
+    border-color: #A78BFA;
     width: 24px;
-    border-radius: 4px;
+    min-width: 24px;
+    border-radius: 5px;
 }
 
 /* ===================================

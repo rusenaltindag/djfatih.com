@@ -2,51 +2,195 @@
     "gallery": [
         {
             "id": 1,
-            "image": "https://images.unsplash.com/photo-1571266028243-e4733b0f0bb0?w=800",
-            "title": "Klein Turkuaz",
-            "venue": "Klein Turkuaz",
-            "date": "Kasım 2024",
-            "event": "Techno Night"
+            "type": "image",
+            "preview": "assets/gallery-img-06_preview.jpg",
+            "src": "assets/gallery-img-06.jpeg",
+            "title": "Gece",
+            "venue": "Party Night"
         },
         {
             "id": 2,
-            "image": "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=800",
-            "title": "Sunset Party",
-            "venue": "360 Istanbul",
-            "date": "Ekim 2024",
-            "event": "Sunset Sessions"
+            "type": "image",
+            "preview": "assets/gallery-img-09_preview.jpg",
+            "src": "assets/gallery-img-09.jpeg",
+            "title": "DJ Fatih",
+            "venue": "Performance"
         },
         {
             "id": 3,
-            "image": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=800",
-            "title": "Warehouse Rave",
-            "venue": "Warehouse",
-            "date": "Eylül 2024",
-            "event": "Underground Night"
+            "type": "video",
+            "preview": "assets/gallery-vid-06_thumb.jpg",
+            "src": "assets/gallery-vid-06.mp4",
+            "title": "DJ Fatih Live",
+            "venue": "Party"
         },
         {
             "id": 4,
-            "image": "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=800",
-            "title": "Beach Festival",
-            "venue": "Bodrum",
-            "date": "Ağustos 2024",
-            "event": "Summer Festival"
+            "type": "video",
+            "preview": "assets/gallery-vid-05_thumb.jpg",
+            "src": "assets/gallery-vid-05.mp4",
+            "title": "Performans",
+            "venue": "Event"
         },
         {
             "id": 5,
-            "image": "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=800",
-            "title": "Club Performance",
-            "venue": "Indigo",
-            "date": "Temmuz 2024",
-            "event": "Weekly Residency"
+            "type": "video",
+            "preview": "assets/gallery-vid-01_thumb.jpg",
+            "src": "assets/gallery-vid-01.mp4",
+            "title": "Canlı Performans",
+            "venue": "Club"
         },
         {
             "id": 6,
-            "image": "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=800",
-            "title": "Open Air Event",
-            "venue": "Zorlu PSM",
-            "date": "Haziran 2024",
-            "event": "Open Air Series"
+            "type": "image",
+            "preview": "assets/gallery-img-15_preview.jpeg",
+            "src": "assets/gallery-img-15.jpeg",
+            "title": "Live Performance",
+            "venue": "Event"
+        },
+        {
+            "id": 7,
+            "type": "image",
+            "preview": "assets/gallery-img-05_preview.jpg",
+            "src": "assets/gallery-img-05.jpeg",
+            "title": "Performans",
+            "venue": "Club"
+        },
+        {
+            "id": 8,
+            "type": "image",
+            "preview": "assets/gallery-img-01_preview.jpg",
+            "src": "assets/gallery-img-01.jpeg",
+            "title": "DJ Fatih",
+            "venue": "Performance"
+        },
+        {
+            "id": 9,
+            "type": "video",
+            "preview": "assets/gallery-vid-02_thumb.jpg",
+            "src": "assets/gallery-vid-02.mp4",
+            "title": "DJ Set",
+            "venue": "Event"
+        },
+        {
+            "id": 10,
+            "type": "image",
+            "preview": "assets/gallery-img-02_preview.jpg",
+            "src": "assets/gallery-img-02.jpeg",
+            "title": "Sahne",
+            "venue": "Live Set"
+        },
+        {
+            "id": 11,
+            "type": "image",
+            "preview": "assets/gallery-img-03_preview.jpg",
+            "src": "assets/gallery-img-03.jpeg",
+            "title": "Club Night",
+            "venue": "Party"
+        },
+        {
+            "id": 12,
+            "type": "video",
+            "preview": "assets/gallery-vid-03_thumb.jpg",
+            "src": "assets/gallery-vid-03.mp4",
+            "title": "Sahne",
+            "venue": "Party"
+        },
+        {
+            "id": 13,
+            "type": "image",
+            "preview": "assets/gallery-img-04_preview.jpg",
+            "src": "assets/gallery-img-04.jpeg",
+            "title": "DJ Session",
+            "venue": "Event"
+        },
+        {
+            "id": 14,
+            "type": "image",
+            "preview": "assets/gallery-img-07_preview.jpg",
+            "src": "assets/gallery-img-07.jpeg",
+            "title": "Konsol",
+            "venue": "Studio"
+        },
+        {
+            "id": 15,
+            "type": "video",
+            "preview": "assets/gallery-vid-04_thumb.jpg",
+            "src": "assets/gallery-vid-04.mp4",
+            "title": "Live Mix",
+            "venue": "Club"
+        },
+        {
+            "id": 16,
+            "type": "image",
+            "preview": "assets/gallery-img-08_preview.jpg",
+            "src": "assets/gallery-img-08.jpeg",
+            "title": "Set",
+            "venue": "Event"
+        },
+        {
+            "id": 17,
+            "type": "image",
+            "preview": "assets/gallery-img-10_preview.jpg",
+            "src": "assets/gallery-img-10.jpeg",
+            "title": "Sahne",
+            "venue": "Club"
+        },
+        {
+            "id": 18,
+            "type": "video",
+            "preview": "assets/gallery-vid-07_thumb.jpg",
+            "src": "assets/gallery-vid-07.mp4",
+            "title": "Canlı Performans",
+            "venue": "Club"
+        },
+        {
+            "id": 19,
+            "type": "image",
+            "preview": "assets/gallery-img-11_preview.jpg",
+            "src": "assets/gallery-img-11.jpeg",
+            "title": "Gece",
+            "venue": "Party"
+        },
+        {
+            "id": 20,
+            "type": "image",
+            "preview": "assets/gallery-img-12_preview.jpg",
+            "src": "assets/gallery-img-12.jpg",
+            "title": "DJ Performans",
+            "venue": "İstanbul"
+        },
+        {
+            "id": 21,
+            "type": "image",
+            "preview": "assets/gallery-img-13_preview.jpeg",
+            "src": "assets/gallery-img-13.jpeg",
+            "title": "Sahne Anı",
+            "venue": "Club Night"
+        },
+        {
+            "id": 22,
+            "type": "image",
+            "preview": "assets/gallery-img-14_preview.jpeg",
+            "src": "assets/gallery-img-14.jpeg",
+            "title": "DJ Setup",
+            "venue": "Studio"
+        },
+        {
+            "id": 23,
+            "type": "image",
+            "preview": "assets/gallery-img-16_preview.jpeg",
+            "src": "assets/gallery-img-16.jpeg",
+            "title": "Konsol Başında",
+            "venue": "Party Night"
+        },
+        {
+            "id": 24,
+            "type": "image",
+            "preview": "assets/gallery-img-17_preview.jpeg",
+            "src": "assets/gallery-img-17.jpeg",
+            "title": "DJ Fatih",
+            "venue": "Istanbul"
         }
     ]
 }
