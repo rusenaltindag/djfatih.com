@@ -114,6 +114,13 @@ document.addEventListener('DOMContentLoaded', async () => {
     initLightbox();
     initContactForm();
     initScrollAnimations();
+
+    // Pause music when user navigates away or switches tabs
+    document.addEventListener('visibilitychange', () => {
+        if (document.hidden && state.sound && state.isPlaying) {
+            state.sound.pause();
+        }
+    });
 });
 
 function initLucide() {
@@ -323,7 +330,7 @@ function initPlayer() {
         document.getElementById('modal-genre').textContent = mix.genre;
         document.getElementById('modal-description').textContent = mix.description;
         document.getElementById('modal-duration').textContent = mix.duration;
-        document.getElementById('modal-date').textContent = formatDate(mix.date);
+        document.getElementById('modal-date').textContent = '';
         document.getElementById('modal-full-link').href = mix.fullLink;
 
         // Show modal
@@ -365,6 +372,42 @@ function initPlayer() {
         trackInfoModal.addEventListener('click', (e) => {
             if (e.target === trackInfoModal) {
                 closeTrackInfoModal();
+            }
+        });
+    }
+
+    // Explicit click handler for mobile full track link
+    const mobileFullLink = document.getElementById('full-track-link-mobile');
+    if (mobileFullLink) {
+        mobileFullLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            const href = mobileFullLink.getAttribute('href');
+            if (href && href !== '#' && href !== 'javascript:void(0)') {
+                window.location.href = href;
+            }
+        });
+    }
+
+    // Explicit click handler for desktop full track link
+    const desktopFullLink = document.getElementById('full-track-link');
+    if (desktopFullLink) {
+        desktopFullLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            const href = desktopFullLink.getAttribute('href');
+            if (href && href !== '#' && href !== 'javascript:void(0)') {
+                window.location.href = href;
+            }
+        });
+    }
+
+    // Explicit click handler for modal full track link
+    const modalFullLink = document.getElementById('modal-full-link');
+    if (modalFullLink) {
+        modalFullLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            const href = modalFullLink.getAttribute('href');
+            if (href && href !== '#' && href !== 'javascript:void(0)') {
+                window.location.href = href;
             }
         });
     }

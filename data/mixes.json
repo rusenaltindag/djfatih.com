@@ -5,51 +5,46 @@
             "title": "Sarışınım Afro Remix",
             "genre": "pop",
             "duration": "00:24",
-            "date": "2024-12-01",
             "artwork": "assets/mixes/mix-04-sarisinim-afro.jpg",
             "previewUrl": "mp3/gulsen-sarisinim-afro-remix.mp3",
-            "fullLink": "#",
+            "fullLink": "https://youtu.be/IfjfUeDS9-8?si=-q9DMDMgxlhA4C0t",
             "description": "Sarışınım - Gülşen reworked by Dj Fatih From Istanbul"
         },
         {
             "id": 2,
-            "title": "Seni Düşündüm - Çağla & Doğu Swag",
+            "title": "Seni Düşündüm",
             "genre": "rap",
             "duration": "00:18",
-            "date": "2024-12-01",
             "artwork": "assets/mixes/mix-07-seni-dusundum.jpg",
             "previewUrl": "mp3/seni-dusundum-intro-remix-cagla-dogu-swag.mp3",
-            "fullLink": "#",
-            "description": "Seni Düşündüm - Çağla & Doğu Swag reworked by Dj Fatih From Istanbul"
+            "fullLink": "https://www.youtube.com/watch?v=H4jx6lJ1zwE",
+            "description": "Çağla & Doğu Swag - Seni Düşündüm reworked by Dj Fatih From Istanbul"
         },
         {
             "id": 3,
-            "title": "Melike Şahin - Diva Yorgun",
+            "title": "Diva Yorgun",
             "genre": "pop",
             "duration": "00:34",
-            "date": "2024-12-01",
             "artwork": "assets/mixes/mix-09-diva-yorgun.jpg",
             "previewUrl": "mp3/Melike-Sahin-Diva-Yorgun.mp3",
-            "fullLink": "#",
+            "fullLink": "https://soundcloud.com/dj-fatih-from-istanbul/melike-sahin-diva-yorgun-dj-fatih-from-istanbul-re-work",
             "description": "Melike Şahin - Diva Yorgun reworked by Dj Fatih From Istanbul"
         },
         {
             "id": 4,
-            "title": "Dr.Alban - No Coke",
+            "title": "No Coke",
             "genre": "yabanci",
             "duration": "00:34",
-            "date": "2024-12-01",
             "artwork": "assets/mixes/mix-11-no-coke.jpg",
             "previewUrl": "mp3/Dr.Alban-No-Coke.mp3",
-            "fullLink": "#",
+            "fullLink": "https://www.youtube.com/watch?v=IMLfefVBJ4g",
             "description": "Dr.Alban - No Coke reworked by Dj Fatih From Istanbul"
         },
         {
             "id": 5,
-            "title": "Ege - Delice Bir Sevda",
+            "title": "Delice Bir Sevda",
             "genre": "90'lar",
             "duration": "00:33",
-            "date": "2024-12-01",
             "artwork": "assets/mixes/mix-10-delice-bir-sevda.jpg",
             "previewUrl": "mp3/Ege-Delice-Bir-Sevda.mp3",
             "fullLink": "#",
@@ -57,32 +52,29 @@
         },
         {
             "id": 6,
-            "title": "Yandırdın qəlbimi - Habil Məmmədov və şagirdləri",
+            "title": "Yandırdın qəlbimi",
             "genre": "hareketli",
             "duration": "00:18",
-            "date": "2024-12-01",
             "artwork": "assets/mixes/mix-08-yandirdin-kalbimi.jpg",
             "previewUrl": "mp3/yandirdin-kalbimi.mp3",
-            "fullLink": "#",
-            "description": "andırdın qəlbimi - Habil Məmmədov və şagirdləri reworked by Dj Fatih From Istanbul"
+            "fullLink": "https://www.youtube.com/watch?v=zyUSrq9JYhY",
+            "description": "Habil Məmmədov və şagirdləri - Yandırdın qəlbimi reworked by Dj Fatih From Istanbul"
         },
         {
             "id": 7,
-            "title": "Hey Gidi Koca Dünya - Belkıs Özener",
+            "title": "Hey Gidi Koca Dünya",
             "genre": "nostalji",
             "duration": "00:27",
-            "date": "2024-12-01",
             "artwork": "assets/mixes/mix-02-hey-gidi-koca-dunya.jpg",
             "previewUrl": "mp3/belkis-ozener-hey-gidi-koca-dunya-remix-1969.mp3",
-            "fullLink": "#",
-            "description": "Hey Gidi Koca Dünya - Belkıs Özener reworked by Dj Fatih From Istanbul"
+            "fullLink": "https://www.youtube.com/watch?v=pWXbsPUKrfU",
+            "description": "Belkıs Özener - Hey Gidi Koca Dünya reworked by Dj Fatih From Istanbul"
         },
         {
             "id": 8,
             "title": "Sarışınım",
             "genre": "pop",
             "duration": "00:30",
-            "date": "2024-12-01",
             "artwork": "assets/mixes/mix-03-sarisinim.jpg",
             "previewUrl": "mp3/sarisinim-remix.mp3",
             "fullLink": "#",
@@ -93,10 +85,9 @@
             "title": "Ateşe Attın Beni",
             "genre": "nostalji",
             "duration": "00:36",
-            "date": "2024-12-01",
             "artwork": "assets/mixes/mix-05-atese-attin-beni.jpg",
             "previewUrl": "mp3/kamuran-akkor-atese-attin-beni-remix.mp3",
-            "fullLink": "#",
+            "fullLink": "https://www.youtube.com/watch?v=B7KLe1hzB4o",
             "description": "Ateşe Attın Beni Kâmuran Akkor ‧ 1983 reworked by Dj Fatih From Istanbul"
         },
         {
@@ -104,10 +95,9 @@
             "title": "Dert Ortağım",
             "genre": "nostalji",
             "duration": "00:18",
-            "date": "2024-12-01",
             "artwork": "assets/mixes/mix-06-dert-ortagim.jpg",
             "previewUrl": "mp3/semiramis-pekkan-dert-ortagim.mp3",
-            "fullLink": "#",
+            "fullLink": "https://www.youtube.com/watch?v=yG06TwFStJg",
             "description": "Semiramis Pekkan - Dert Ortağım 1972 reworked by Dj Fatih From Istanbul"
         },
         {
@@ -115,10 +105,9 @@
             "title": "Çıt Çıt Çedene - Barış Manço",
             "genre": "90'lar",
             "duration": "00:32",
-            "date": "2024-12-01",
             "artwork": "assets/mixes/mix-01-cit-cit-cedene.jpg",
             "previewUrl": "mp3/baris-manco-cit-cit-cedene.mp3",
-            "fullLink": "#",
+            "fullLink": "https://www.youtube.com/watch?v=4yyROY7S7F4",
             "description": "Çıt Çıt Çedene - Barış Manço remix by Dj Fatih From Istanbul"
         }
     ]
