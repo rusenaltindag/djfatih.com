@@ -26,6 +26,14 @@
         },
         {
             "id": 4,
+            "type": "image",
+            "preview": "assets/berna_preview.jpg",
+            "src": "assets/berna.jpg",
+            "title": "Berna Öztürk",
+            "venue": "Sahne"
+        },
+        {
+            "id": 5,
             "type": "video",
             "preview": "assets/gallery-vid-05_thumb.jpg",
             "src": "assets/gallery-vid-05.mp4",
@@ -33,7 +41,15 @@
             "venue": "Event"
         },
         {
-            "id": 5,
+            "id": 6,
+            "type": "image",
+            "preview": "assets/istanbul-havasi_preview.jpg",
+            "src": "assets/istanbul-havasi.jpg",
+            "title": "İstanbul Havası",
+            "venue": "Performans"
+        },
+        {
+            "id": 7,
             "type": "video",
             "preview": "assets/gallery-vid-01_thumb.jpg",
             "src": "assets/gallery-vid-01.mp4",
@@ -41,7 +57,15 @@
             "venue": "Club"
         },
         {
-            "id": 6,
+            "id": 8,
+            "type": "image",
+            "preview": "assets/pascha_preview.jpg",
+            "src": "assets/pascha.jpg",
+            "title": "Pascha",
+            "venue": "Club"
+        },
+        {
+            "id": 9,
             "type": "image",
             "preview": "assets/gallery-img-15_preview.jpeg",
             "src": "assets/gallery-img-15.jpeg",
@@ -49,7 +73,15 @@
             "venue": "Event"
         },
         {
-            "id": 7,
+            "id": 10,
+            "type": "image",
+            "preview": "assets/rafet_preview.jpg",
+            "src": "assets/rafet.jpg",
+            "title": "Rafet El Roman",
+            "venue": "Konser"
+        },
+        {
+            "id": 11,
             "type": "image",
             "preview": "assets/gallery-img-05_preview.jpg",
             "src": "assets/gallery-img-05.jpeg",
@@ -57,7 +89,15 @@
             "venue": "Club"
         },
         {
-            "id": 8,
+            "id": 12,
+            "type": "image",
+            "preview": "assets/yasar_preview.jpg",
+            "src": "assets/yasar.jpg",
+            "title": "Yaşar",
+            "venue": "Sahne"
+        },
+        {
+            "id": 13,
             "type": "image",
             "preview": "assets/gallery-img-01_preview.jpg",
             "src": "assets/gallery-img-01.jpeg",
@@ -65,7 +105,7 @@
             "venue": "Performance"
         },
         {
-            "id": 9,
+            "id": 14,
             "type": "video",
             "preview": "assets/gallery-vid-02_thumb.jpg",
             "src": "assets/gallery-vid-02.mp4",
@@ -73,7 +113,7 @@
             "venue": "Event"
         },
         {
-            "id": 10,
+            "id": 15,
             "type": "image",
             "preview": "assets/gallery-img-02_preview.jpg",
             "src": "assets/gallery-img-02.jpeg",
@@ -81,7 +121,7 @@
             "venue": "Live Set"
         },
         {
-            "id": 11,
+            "id": 16,
             "type": "image",
             "preview": "assets/gallery-img-03_preview.jpg",
             "src": "assets/gallery-img-03.jpeg",
@@ -89,7 +129,7 @@
             "venue": "Party"
         },
         {
-            "id": 12,
+            "id": 17,
             "type": "video",
             "preview": "assets/gallery-vid-03_thumb.jpg",
             "src": "assets/gallery-vid-03.mp4",
@@ -97,7 +137,7 @@
             "venue": "Party"
         },
         {
-            "id": 13,
+            "id": 18,
             "type": "image",
             "preview": "assets/gallery-img-04_preview.jpg",
             "src": "assets/gallery-img-04.jpeg",
@@ -105,7 +145,7 @@
             "venue": "Event"
         },
         {
-            "id": 14,
+            "id": 19,
             "type": "image",
             "preview": "assets/gallery-img-07_preview.jpg",
             "src": "assets/gallery-img-07.jpeg",
@@ -113,7 +153,7 @@
             "venue": "Studio"
         },
         {
-            "id": 15,
+            "id": 20,
             "type": "video",
             "preview": "assets/gallery-vid-04_thumb.jpg",
             "src": "assets/gallery-vid-04.mp4",
@@ -121,7 +161,7 @@
             "venue": "Club"
         },
         {
-            "id": 16,
+            "id": 21,
             "type": "image",
             "preview": "assets/gallery-img-08_preview.jpg",
             "src": "assets/gallery-img-08.jpeg",
@@ -129,7 +169,7 @@
             "venue": "Event"
         },
         {
-            "id": 17,
+            "id": 22,
             "type": "image",
             "preview": "assets/gallery-img-10_preview.jpg",
             "src": "assets/gallery-img-10.jpeg",
@@ -137,7 +177,7 @@
             "venue": "Club"
         },
         {
-            "id": 18,
+            "id": 23,
             "type": "video",
             "preview": "assets/gallery-vid-07_thumb.jpg",
             "src": "assets/gallery-vid-07.mp4",
@@ -145,7 +185,7 @@
             "venue": "Club"
         },
         {
-            "id": 19,
+            "id": 24,
             "type": "image",
             "preview": "assets/gallery-img-11_preview.jpg",
             "src": "assets/gallery-img-11.jpeg",
@@ -153,7 +193,7 @@
             "venue": "Party"
         },
         {
-            "id": 20,
+            "id": 25,
             "type": "image",
             "preview": "assets/gallery-img-12_preview.jpg",
             "src": "assets/gallery-img-12.jpg",
@@ -161,7 +201,7 @@
             "venue": "İstanbul"
         },
         {
-            "id": 21,
+            "id": 26,
             "type": "image",
             "preview": "assets/gallery-img-13_preview.jpeg",
             "src": "assets/gallery-img-13.jpeg",
@@ -169,7 +209,7 @@
             "venue": "Club Night"
         },
         {
-            "id": 22,
+            "id": 27,
             "type": "image",
             "preview": "assets/gallery-img-14_preview.jpeg",
             "src": "assets/gallery-img-14.jpeg",
@@ -177,7 +217,7 @@
             "venue": "Studio"
         },
         {
-            "id": 23,
+            "id": 28,
             "type": "image",
             "preview": "assets/gallery-img-16_preview.jpeg",
             "src": "assets/gallery-img-16.jpeg",
@@ -185,7 +225,7 @@
             "venue": "Party Night"
         },
         {
-            "id": 24,
+            "id": 29,
             "type": "image",
             "preview": "assets/gallery-img-17_preview.jpeg",
             "src": "assets/gallery-img-17.jpeg",

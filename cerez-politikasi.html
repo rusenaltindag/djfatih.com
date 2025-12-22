@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Çerez Politikası - DJ Fatih</title>
+    <meta name="description" content="DJ Fatih - Çerez Politikası ve Çerez Kullanımı Hakkında Bilgilendirme">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'dark': {
+                            900: '#0a0a0a',
+                            800: '#111111',
+                            700: '#1a1a1a',
+                            600: '#2a2a2a',
+                        },
+                        'accent': {
+                            gold: '#D4AF37',
+                            goldLight: '#E5C158',
+                            lilac: '#A78BFA',
+                            lilacLight: '#C4B5FD',
+                        }
+                    },
+                    fontFamily: {
+                        'heading': ['Playfair Display', 'serif'],
+                        'body': ['Outfit', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: #0a0a0a;
+            color: #ffffff;
+        }
+
+        .prose h2 {
+            color: #A78BFA;
+            font-family: 'Playfair Display', serif;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .prose p,
+        .prose li {
+            color: #9ca3af;
+            line-height: 1.8;
+        }
+
+        .prose ul {
+            list-style-type: none;
+            padding-left: 0;
+            margin-bottom: 1.5rem;
+        }
+
+        .prose li {
+            margin-bottom: 1rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .prose li::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0.5rem;
+            width: 8px;
+            height: 8px;
+            background-color: #A78BFA;
+            border-radius: 50%;
+        }
+
+        .prose strong {
+            color: #C4B5FD;
+        }
+    </style>
+</head>
+
+<body class="bg-dark-900 min-h-screen">
+    <!-- Header -->
+    <header class="py-6 border-b border-white/10">
+        <div class="container mx-auto px-4">
+            <a href="/" class="inline-flex items-center gap-2 text-purple-400 hover:text-purple-300 transition-colors">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+                </svg>
+                <span>Ana Sayfaya Dön</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- Content -->
+    <main class="py-12">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <h1 class="font-heading text-3xl md:text-4xl font-bold text-white mb-8">
+                Çerez <span class="text-purple-400">Politikası</span>
+            </h1>
+
+            <div class="prose max-w-none">
+                <p class="text-lg mb-8">
+                    Çerezler; ziyaret ettiğiniz web siteleri tarafından tarayıcınıza veya cihazınıza kaydedilen küçük
+                    veri dosyalarıdır. Bu dosyalar sayesinde sitemiz sizi tanıyabilir, tercihlerinizi hatırlayabilir ve
+                    siteyi daha verimli kullanmanızı sağlar.
+                </p>
+
+                <h2 class="text-xl font-semibold">Kullandığımız Çerez Türleri</h2>
+
+                <ul>
+                    <li>
+                        <strong>Zorunlu Çerezler:</strong> Sitenin güvenli ve doğru çalışması için gereklidir.
+                    </li>
+                    <li>
+                        <strong>Analitik Çerezler:</strong> Site trafiğini ve kullanım alışkanlıklarını ölçmemize
+                        yardımcı olur.
+                    </li>
+                    <li>
+                        <strong>Fonksiyonel Çerezler:</strong> Tercihlerinizi (dil, bölge vb.) kaydederek deneyiminizi
+                        kişiselleştirir.
+                    </li>
+                    <li>
+                        <strong>Reklam Çerezleri:</strong> İlgi alanlarınıza uygun içerik ve reklam sunmamıza imkân
+                        tanır.
+                    </li>
+                </ul>
+
+                <div class="mt-8 p-6 rounded-xl bg-dark-700/50 border border-purple-500/20">
+                    <p class="text-gray-300">
+                        Çerezleri dilediğiniz zaman tarayıcı ayarlarınızdan engelleyebilir veya silebilirsiniz. Ancak bu
+                        durumda sitemizin bazı bölümlerinin doğru çalışmayabileceğini belirtmek isteriz.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-6 border-t border-white/10 mt-12">
+        <div class="container mx-auto px-4 text-center text-gray-500 text-sm">
+            <p>&copy; 2024 DJ Fatih. Tüm hakları saklıdır.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
