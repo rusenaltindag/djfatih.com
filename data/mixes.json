@@ -109,6 +109,336 @@
             "previewUrl": "mp3/baris-manco-cit-cit-cedene.mp3",
             "fullLink": "https://www.youtube.com/watch?v=4yyROY7S7F4",
             "description": "Çıt Çıt Çedene - Barış Manço remix by Dj Fatih From Istanbul"
+        },
+        {
+            "id": 12,
+            "title": "Les Passants",
+            "genre": "yabanci",
+            "duration": "03:30",
+            "artwork": "assets/mixes/mix-12-les-passants.jpg",
+            "previewUrl": "",
+            "fullLink": "https://www.youtube.com/watch?v=2N0xro1fkJE",
+            "description": "Zaz – Les Passants (2024 Re-Work Remix by DJ Fatih)"
+        },
+        {
+            "id": 13,
+            "title": "Yok Başka Hayalim",
+            "genre": "pop",
+            "duration": "03:30",
+            "artwork": "assets/mixes/mix-13-yok-başka-hayalim.jpg",
+            "previewUrl": "",
+            "fullLink": "https://www.youtube.com/watch?v=OGTySSb9xKs",
+            "description": "Tan Taşçı – Yok Başka Hayalim (2025 Remix by DJ Fatih)"
+        },
+        {
+            "id": 14,
+            "title": "Yerinde Dur",
+            "genre": "hareketli",
+            "duration": "03:30",
+            "artwork": "assets/mixes/mix-14-yerinde-dur.jpg",
+            "previewUrl": "",
+            "fullLink": "https://www.youtube.com/watch?v=COAKRcA1ZEo",
+            "description": "Yerinde Dur (Orient & Afro Remix) – Demet Akalın x Sefo | DJ Fatih"
+        },
+        {
+            "id": 15,
+            "title": "Mağusa Limanı",
+            "genre": "nostalji",
+            "duration": "03:30",
+            "artwork": "assets/mixes/mix-15-mağusa-limanı.jpg",
+            "previewUrl": "",
+            "fullLink": "https://www.youtube.com/watch?v=qrK3WTP4qLM",
+            "description": "Mağusa Limanı – Volkan Konak & Selim Bölükbaşı | DJ Fatih Edit"
+        },
+        {
+            "id": 16,
+            "title": "Üsküdar'a Giderken",
+            "genre": "hareketli",
+            "duration": "03:30",
+            "artwork": "assets/mixes/mix-16-üsküdara-giderken.jpg",
+            "previewUrl": "",
+            "fullLink": "https://www.youtube.com/watch?v=SfN07owW7Rc",
+            "description": "Üsküdar'a Giderken - Afro House Remix by DJ Fatih"
+        },
+        {
+            "id": 17,
+            "title": "Yama",
+            "genre": "yabanci",
+            "duration": "03:30",
+            "artwork": "assets/mixes/mix-17-yama.jpg",
+            "previewUrl": "",
+            "fullLink": "https://www.youtube.com/watch?v=Fd_ZzzVYPuA",
+            "description": "Dystinct - Yama (Dj Fatih Remix)"
+        },
+        {
+            "id": 18,
+            "title": "Resimdeki Gözyaşları",
+            "genre": "nostalji",
+            "duration": "03:30",
+            "artwork": "assets/mixes/mix-18-resimdeki-gözyaşları.jpg",
+            "previewUrl": "",
+            "fullLink": "https://www.youtube.com/watch?v=LlMbB27IHzg",
+            "description": "Cem Karaca - Resimdeki Gözyaşları (Cover) by DJ Fatih"
+        },
+        {
+            "id": 19,
+            "title": "Beni Unutma",
+            "genre": "pop",
+            "duration": "03:30",
+            "artwork": "assets/mixes/mix-19-beni-unutma.jpg",
+            "previewUrl": "",
+            "fullLink": "https://www.youtube.com/watch?v=c1C2YcLYO2I",
+            "description": "Demet Akalın ft. Lvbel C5 - Beni Unutma (Remix Dj Fatih from Istanbul)"
+        },
+        {
+            "id": 20,
+            "title": "Şinanay",
+            "genre": "nostalji",
+            "duration": "03:30",
+            "artwork": "assets/mixes/mix-20-şinanay.jpg",
+            "previewUrl": "",
+            "fullLink": "https://www.youtube.com/watch?v=vW1UD52Y-I0",
+            "description": "Sezen Aksu – Şinanay (2025 DJ Fatih Remix)"
+        },
+        {
+            "id": 21,
+            "title": "100. Yıl Marşı",
+            "genre": "hareketli",
+            "duration": "03:30",
+            "artwork": "assets/mixes/mix-21-100-yıl-marşı.jpg",
+            "previewUrl": "",
+            "fullLink": "https://www.youtube.com/watch?v=XMo8Q-SXPFw",
+            "description": "Kıraç - 100. Yıl Marşı (Fenerbahçe Remix) by DJ Fatih"
+        },
+        {
+            "id": 22,
+            "title": "Lambada",
+            "genre": "yabanci",
+            "duration": "03:30",
+            "artwork": "assets/mixes/mix-22-lambada.jpg",
+            "previewUrl": "",
+            "fullLink": "https://www.youtube.com/watch?v=iz3K_Pp3LJ8",
+            "description": "Lambada (2025 Remix) – Kaoma | DJ Fatih"
+        },
+        {
+            "id": 23,
+            "title": "2017 HipHop RnB Party Mix",
+            "genre": "yabanci",
+            "duration": "30:00",
+            "artwork": "assets/mixes/mix-23-2017-hiphop-rnb-party-mix.jpg",
+            "previewUrl": "",
+            "fullLink": "https://www.youtube.com/watch?v=RTj4UybW4a8",
+            "description": "2017 HipHop RnB Party Mix | DJ Fatih – Best Club Vibes"
+        },
+        {
+            "id": 24,
+            "title": "2015 HipHop RnB Party Mix",
+            "genre": "yabanci",
+            "duration": "30:00",
+            "artwork": "assets/mixes/mix-24-2015-hiphop-rnb-party-mix.jpg",
+            "previewUrl": "",
+            "fullLink": "https://www.youtube.com/watch?v=Uf53tVxCUB4",
+            "description": "2015 HipHop RnB Party Mix – DJ Fatih (Live Session)"
+        },
+        {
+            "id": 25,
+            "title": "Can Bedenden Çıkmayınca",
+            "genre": "nostalji",
+            "duration": "03:30",
+            "artwork": "assets/mixes/mix-25-can-bedenden-çıkmayınca.jpg",
+            "previewUrl": "",
+            "fullLink": "https://www.youtube.com/watch?v=-zONavoQw6s",
+            "description": "Barış Manço - Can Bedenden Çıkmayınca (REMIX) by DJ Fatih"
+        },
+        {
+            "id": 26,
+            "title": "Şiire Gazele",
+            "genre": "hareketli",
+            "duration": "03:30",
+            "artwork": "assets/mixes/mix-26-şiire-gazele.jpg",
+            "previewUrl": "",
+            "fullLink": "https://www.youtube.com/watch?v=RObh_X_j_2Y",
+            "description": "Habil Memmedov & Öğrencileri – Şiire Gazele (DJ Fatih Cover Remix)"
+        },
+        {
+            "id": 27,
+            "title": "Şafak Türküsü",
+            "genre": "nostalji",
+            "duration": "03:30",
+            "artwork": "assets/mixes/mix-27-şafak-türküsü.jpg",
+            "previewUrl": "",
+            "fullLink": "https://www.youtube.com/watch?v=wx3IEDYL2SM",
+            "description": "Ahmet Kaya – Şafak Türküsü (DJ Fatih Yeni Düzenleme)"
+        },
+        {
+            "id": 28,
+            "title": "İkimiz Bir Fidanın",
+            "genre": "nostalji",
+            "duration": "03:30",
+            "artwork": "assets/mixes/mix-28-i̇kimiz-bir-fidanın.jpg",
+            "previewUrl": "",
+            "fullLink": "https://www.youtube.com/watch?v=xCX7EbS0q7s",
+            "description": "Tülay – İkimiz Bir Fidanın (1975) | Yeni Düzenleme – DJ Fatih"
+        },
+        {
+            "id": 29,
+            "title": "Bahça Duvarından Aştım",
+            "genre": "hareketli",
+            "duration": "03:30",
+            "artwork": "assets/mixes/mix-29-bahça-duvarından-aştım.jpg",
+            "previewUrl": "",
+            "fullLink": "https://www.youtube.com/watch?v=x0kE5Y7ImG0",
+            "description": "Bahça Duvarından Aştım – DJ Fatih From Istanbul (Cover)"
+        },
+        {
+            "id": 30,
+            "title": "Şinanari",
+            "genre": "hareketli",
+            "duration": "03:30",
+            "artwork": "assets/mixes/mix-30-şinanari.jpg",
+            "previewUrl": "",
+            "fullLink": "https://www.youtube.com/watch?v=K5_SRq4q4W0",
+            "description": "Şinanari (Remix 2025) – Hüsnü Şenlendirici | DJ Fatih"
+        },
+        {
+            "id": 31,
+            "title": "Iklığ",
+            "genre": "nostalji",
+            "duration": "03:30",
+            "artwork": "assets/mixes/mix-31-iklığ.jpg",
+            "previewUrl": "",
+            "fullLink": "https://www.youtube.com/watch?v=vSmUxkWiPrU",
+            "description": "Moğollar – Iklığ (Special 2025 Remix by DJ Fatih)"
+        },
+        {
+            "id": 32,
+            "title": "Fesupanallah",
+            "genre": "nostalji",
+            "duration": "03:30",
+            "artwork": "assets/mixes/mix-32-fesupanallah.jpg",
+            "previewUrl": "",
+            "fullLink": "https://www.youtube.com/watch?v=XyJUA0tmrgA",
+            "description": "Erkin Koray – Fesupanallah (2025 Edit by DJ Fatih)"
+        },
+        {
+            "id": 33,
+            "title": "Ankara Kızları",
+            "genre": "hareketli",
+            "duration": "03:30",
+            "artwork": "assets/mixes/mix-33-ankara-kızları.jpg",
+            "previewUrl": "",
+            "fullLink": "https://www.youtube.com/watch?v=mY03ZWMaNrU",
+            "description": "Ankara Kızları – Josef & Lenabi | DJ Fatih Remix"
+        },
+        {
+            "id": 34,
+            "title": "Senden Başka",
+            "genre": "nostalji",
+            "duration": "03:30",
+            "artwork": "assets/mixes/mix-34-senden-başka.jpg",
+            "previewUrl": "",
+            "fullLink": "https://www.youtube.com/watch?v=_-_LF6KNexc",
+            "description": "Senden Başka (Remix) – Füsun Önal | DJ Fatih"
+        },
+        {
+            "id": 35,
+            "title": "Kahpelik Moda",
+            "genre": "rap",
+            "duration": "03:30",
+            "artwork": "assets/mixes/mix-35-kahpelik-moda.jpg",
+            "previewUrl": "",
+            "fullLink": "https://www.youtube.com/watch?v=UWAQQGbQROQ",
+            "description": "Kahpelik Moda (Remix) – Tekir x İntizar | DJ Fatih"
+        },
+        {
+            "id": 36,
+            "title": "Ben Sana Gelemem",
+            "genre": "nostalji",
+            "duration": "03:30",
+            "artwork": "assets/mixes/mix-36-ben-sana-gelemem.jpg",
+            "previewUrl": "",
+            "fullLink": "https://www.youtube.com/watch?v=qtrxnTLI0ok",
+            "description": "Mela Bedel – Ben Sana Gelemem (2025 Remix by DJ Fatih)"
+        },
+        {
+            "id": 37,
+            "title": "HipHop RnB 2016 Party Mix",
+            "genre": "yabanci",
+            "duration": "30:00",
+            "artwork": "assets/mixes/mix-37-hiphop-rnb-2016-party-mix.jpg",
+            "previewUrl": "",
+            "fullLink": "https://www.youtube.com/watch?v=xEwZEwxuKDY",
+            "description": "HipHop RnB 2016 Party Mix – DJ Fatih"
+        },
+        {
+            "id": 38,
+            "title": "Türkçe Pop Akustik Mix Part 2",
+            "genre": "pop",
+            "duration": "45:00",
+            "artwork": "assets/mixes/mix-38-türkçe-pop-akustik-mix-part-2.jpg",
+            "previewUrl": "",
+            "fullLink": "https://www.youtube.com/watch?v=UNvZLMMuPDI",
+            "description": "Türkçe Pop Akustik Mix Part 2 | DJ Fatih"
+        },
+        {
+            "id": 39,
+            "title": "Türkçe Pop Akustik 2014",
+            "genre": "pop",
+            "duration": "45:00",
+            "artwork": "assets/mixes/mix-39-türkçe-pop-akustik-2014.jpg",
+            "previewUrl": "",
+            "fullLink": "https://www.youtube.com/watch?v=m1aXlI5_AFE",
+            "description": "Türkçe Pop Akustik 2014 by DJ Fatih"
+        },
+        {
+            "id": 40,
+            "title": "Türkçe Pop Yeni Remixler 2013-2014",
+            "genre": "pop",
+            "duration": "45:00",
+            "artwork": "assets/mixes/mix-40-türkçe-pop-yeni-remixler-2013-.jpg",
+            "previewUrl": "",
+            "fullLink": "https://www.youtube.com/watch?v=SqvH19Mz7pk",
+            "description": "Türkçe Pop Yeni Remixler 2013-2014 by DJ Fatih"
+        },
+        {
+            "id": 41,
+            "title": "Türkçe POP Remix 2013-2014",
+            "genre": "pop",
+            "duration": "45:00",
+            "artwork": "assets/mixes/mix-41-türkçe-pop-remix-2013-2014.jpg",
+            "previewUrl": "",
+            "fullLink": "https://www.youtube.com/watch?v=sQCphoqkYws",
+            "description": "Türkce POP Remix by Dj Fatih From Istanbul 2013-2014"
+        },
+        {
+            "id": 42,
+            "title": "Türkçe POP Remix Mayıs 2013",
+            "genre": "pop",
+            "duration": "45:00",
+            "artwork": "assets/mixes/mix-42-türkçe-pop-remix-mayıs-2013.jpg",
+            "previewUrl": "",
+            "fullLink": "https://www.youtube.com/watch?v=XqNo-ZT9fyQ",
+            "description": "2013 Mayıs Türkce POP Remix by Dj Fatih From Istanbul"
+        },
+        {
+            "id": 43,
+            "title": "Türkçe Pop Mix 2013",
+            "genre": "pop",
+            "duration": "45:00",
+            "artwork": "assets/mixes/mix-43-türkçe-pop-mix-2013.jpg",
+            "previewUrl": "",
+            "fullLink": "https://www.youtube.com/watch?v=5-WwniB7oVY",
+            "description": "Dj Fatih From Istanbul - Türkçe Pop Mix 2013"
+        },
+        {
+            "id": 44,
+            "title": "Nostalji Remixleri",
+            "genre": "nostalji",
+            "duration": "45:00",
+            "artwork": "assets/mixes/mix-44-nostalji-remixleri.jpg",
+            "previewUrl": "",
+            "fullLink": "https://www.youtube.com/watch?v=4OOdPafJHbg",
+            "description": "Nostalji Remixleri by Dj Fatih From Istanbul"
         }
     ]
 }
