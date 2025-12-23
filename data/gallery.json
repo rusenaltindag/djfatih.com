@@ -1,6 +1,34 @@
 {
     "gallery": [
         {
+            "type": "video",
+            "preview": "assets/gallery-vid-essay-01_thumb.jpg",
+            "src": "assets/gallery-vid-essay-01.mp4",
+            "title": "Canlı Performans",
+            "venue": "Essah Ocakbasi"
+        },
+        {
+            "type": "video",
+            "preview": "assets/gallery-vid-essay-02_thumb.jpg",
+            "src": "assets/gallery-vid-essay-02.mp4",
+            "title": "DJ Set",
+            "venue": "Essah Ocakbasi"
+        },
+        {
+            "type": "image",
+            "preview": "assets/gallery-img-essay-01_preview.jpg",
+            "src": "assets/gallery-img-essay-01.jpeg",
+            "title": "Sahne",
+            "venue": "Essah Ocakbasi"
+        },
+        {
+            "type": "image",
+            "preview": "assets/gallery-img-essay-02_preview.jpg",
+            "src": "assets/gallery-img-essay-02.jpeg",
+            "title": "Performans",
+            "venue": "Essah Ocakbasi"
+        },
+        {
             "id": 1,
             "type": "image",
             "preview": "assets/gallery-img-06_preview.jpg",
