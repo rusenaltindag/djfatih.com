@@ -13,7 +13,7 @@
         {
             "id": 2,
             "title": "Seni Düşündüm",
-            "genre": "rap",
+            "genre": "hiphop",
             "duration": "00:18",
             "artwork": "assets/mixes/mix-07-seni-dusundum.jpg",
             "previewUrl": "mp3/seni-dusundum-intro-remix-cagla-dogu-swag.mp3",
@@ -223,7 +223,7 @@
         {
             "id": 23,
             "title": "2017 HipHop RnB Party Mix",
-            "genre": "yabanci",
+            "genre": "hiphop",
             "duration": "30:00",
             "artwork": "assets/mixes/mix-23-2017-hiphop-rnb-party-mix.jpg",
             "previewUrl": "",
@@ -233,7 +233,7 @@
         {
             "id": 24,
             "title": "2015 HipHop RnB Party Mix",
-            "genre": "yabanci",
+            "genre": "hiphop",
             "duration": "30:00",
             "artwork": "assets/mixes/mix-24-2015-hiphop-rnb-party-mix.jpg",
             "previewUrl": "",
@@ -285,7 +285,7 @@
             "title": "Bahça Duvarından Aştım",
             "genre": "hareketli",
             "duration": "03:30",
-            "artwork": "assets/mixes/mix-29-bahça-duvarından-aştım.jpg",
+            "artwork": "assets/mixes/mix-default.jpg",
             "previewUrl": "",
             "fullLink": "https://www.youtube.com/watch?v=x0kE5Y7ImG0",
             "description": "Bahça Duvarından Aştım – DJ Fatih From Istanbul (Cover)"
@@ -343,7 +343,7 @@
         {
             "id": 35,
             "title": "Kahpelik Moda",
-            "genre": "rap",
+            "genre": "hiphop",
             "duration": "03:30",
             "artwork": "assets/mixes/mix-35-kahpelik-moda.jpg",
             "previewUrl": "",
@@ -363,7 +363,7 @@
         {
             "id": 37,
             "title": "HipHop RnB 2016 Party Mix",
-            "genre": "yabanci",
+            "genre": "hiphop",
             "duration": "30:00",
             "artwork": "assets/mixes/mix-37-hiphop-rnb-2016-party-mix.jpg",
             "previewUrl": "",

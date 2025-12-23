@@ -224,6 +224,28 @@ body {
 }
 
 /* ===================================
+   Format Toggle Buttons
+   =================================== */
+.format-btn {
+    background: transparent;
+    border: none;
+    color: rgba(255, 255, 255, 0.5);
+    transition: all 0.2s ease;
+}
+
+.format-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+}
+
+.format-btn.active {
+    background: linear-gradient(135deg, #A78BFA, #C4B5FD);
+    color: #050505;
+    font-weight: 600;
+    border-radius: 6px;
+}
+
+/* ===================================
    Mix List View (Spotify/YouTube Music Style)
    =================================== */
 .mixes-list-container {

@@ -13,7 +13,9 @@ let galleryData = [];
 // App State
 // ===================================
 const state = {
-    currentFilter: 'all',
+    currentFilter: 'all',     // Genre
+    currentFormat: 'all',     // 'all', 'track', 'set'
+    currentSort: 'default',   // 'default', 'newest'
     currentTrackIndex: -1,
     isPlaying: false,
     visibleMixes: 6,
@@ -34,6 +36,8 @@ const elements = {
     // Mixes
     mixesGrid: document.getElementById('mixes-grid'),
     filterButtons: document.querySelectorAll('.filter-btn'),
+    formatButtons: document.querySelectorAll('.format-btn'),
+    sortSelect: document.getElementById('sort-select'),
     loadMoreBtn: document.getElementById('load-more-btn'),
 
     // Player
@@ -80,6 +84,21 @@ async function loadData() {
         const mixesResponse = await fetch('./data/mixes.json');
         const mixesJson = await mixesResponse.json();
         mixesData = mixesJson.mixes || [];
+
+        // Pre-process data
+        mixesData.forEach(mix => {
+            // Determine format
+            const durationParts = mix.duration.split(':');
+            const minutes = parseInt(durationParts[0]);
+            mix._format = minutes >= 10 ? 'set' : 'track';
+
+            // Extract year
+            const yearMatch = (mix.title + " " + mix.description).match(/(?:20|19)\d{2}/);
+            mix._year = yearMatch ? parseInt(yearMatch[0]) : 0;
+
+            // Normalize genre
+            mix._genreNorm = mix.genre.toLowerCase();
+        });
 
         // Load gallery data
         const galleryResponse = await fetch('./data/gallery.json');
@@ -197,26 +216,51 @@ function initMixes() {
 }
 
 function renderMixes() {
-    const filteredMixes = state.currentFilter === 'all'
+    // 1. Filter by Genre
+    let filtered = state.currentFilter === 'all'
         ? mixesData
-        : mixesData.filter(mix => mix.genre === state.currentFilter);
+        : mixesData.filter(mix => mix._genreNorm === state.currentFilter.toLowerCase());
 
-    const mixesToShow = filteredMixes.slice(0, state.visibleMixes);
+    // 2. Filter by Format (Track vs Set)
+    if (state.currentFormat !== 'all') {
+        filtered = filtered.filter(mix => mix._format === state.currentFormat);
+    }
 
-    elements.mixesGrid.innerHTML = mixesToShow.map((mix, index) => {
-        const isCurrentTrack = state.currentTrackIndex === mixesData.indexOf(mix);
+    // 3. Sort
+    if (state.currentSort === 'newest') {
+        filtered = [...filtered].sort((a, b) => b._year - a._year);
+    }
+
+    const totalFiltered = filtered.length;
+    const mixesToShow = filtered.slice(0, state.visibleMixes);
+
+    // Empty state
+    if (totalFiltered === 0) {
+        elements.mixesGrid.innerHTML = `
+            <div class="col-span-12 text-center py-12 text-gray-500">
+                <p class="text-lg">Bu filtrelemeye uygun mix bulunamadı.</p>
+                <button class="mt-4 text-accent-gold hover:underline" onclick="resetFilters()">Filtreleri Temizle</button>
+            </div>
+        `;
+        elements.loadMoreBtn.classList.add('hidden');
+        return;
+    }
+
+    elements.mixesGrid.innerHTML = mixesToShow.map((mix) => {
+        const originalIndex = mixesData.indexOf(mix);
+        const isCurrentTrack = state.currentTrackIndex === originalIndex;
         const isPlaying = isCurrentTrack && state.isPlaying;
 
         return `
         <div class="mix-list-item ${isCurrentTrack ? 'active' : ''} ${isPlaying ? 'playing' : ''}" 
              data-id="${mix.id}" 
-             data-index="${mixesData.indexOf(mix)}">
+             data-index="${originalIndex}">
             
             <!-- Track Number / Play indicator -->
             <div class="mix-list-number">
                 ${isPlaying
                 ? '<div class="equalizer"><div class="equalizer-bar"></div><div class="equalizer-bar"></div><div class="equalizer-bar"></div><div class="equalizer-bar"></div></div>'
-                : `<span class="track-number">${index + 1}</span>
+                : `<span class="track-number">${originalIndex + 1}</span>
                        <svg class="play-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>`
             }
             </div>
@@ -224,11 +268,15 @@ function renderMixes() {
             <!-- Artwork -->
             <div class="mix-list-artwork">
                 <img src="${mix.artwork}" alt="${mix.title}" loading="lazy">
+                ${mix._format === 'set' ? '<span class="absolute bottom-1 right-1 bg-black/80 text-[10px] px-1.5 py-0.5 rounded text-accent-gold uppercase font-bold tracking-wider">SET</span>' : ''}
             </div>
             
             <!-- Track Info -->
             <div class="mix-list-info">
-                <h3 class="mix-list-title ${isCurrentTrack ? 'text-accent-gold' : ''}">${mix.title}</h3>
+                <div class="flex items-center gap-2">
+                    <h3 class="mix-list-title ${isCurrentTrack ? 'text-accent-gold' : ''}">${mix.title}</h3>
+                    ${mix._year > 0 ? `<span class="text-[10px] items-center px-1.5 py-0.5 rounded border border-white/10 text-gray-400">${mix._year}</span>` : ''}
+                </div>
                 <p class="mix-list-artist">${mix.description}</p>
             </div>
             
@@ -261,29 +309,65 @@ function renderMixes() {
     });
 
     // Update load more button visibility
-    if (mixesToShow.length >= filteredMixes.length) {
+    if (mixesToShow.length >= totalFiltered) {
         elements.loadMoreBtn.classList.add('hidden');
     } else {
         elements.loadMoreBtn.classList.remove('hidden');
     }
 }
 
+function resetFilters() {
+    state.currentFilter = 'all';
+    state.currentFormat = 'all';
+    state.currentSort = 'default';
+    state.visibleMixes = 6;
+
+    // Update UI elements
+    elements.filterButtons.forEach(b => {
+        b.classList.toggle('active', b.dataset.filter === 'all');
+    });
+    if (elements.sortSelect) elements.sortSelect.value = 'default';
+    elements.formatButtons.forEach(b => {
+        b.classList.toggle('active', b.dataset.format === 'all');
+    });
+
+    renderMixes();
+}
+
 // ===================================
 // Filters
 // ===================================
 function initFilters() {
+    // Genre Filters
     elements.filterButtons.forEach(btn => {
         btn.addEventListener('click', () => {
-            // Update active state
             elements.filterButtons.forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
-
-            // Update filter and re-render
             state.currentFilter = btn.dataset.filter;
             state.visibleMixes = 6;
             renderMixes();
         });
     });
+
+    // Format Filters (Tracks vs Sets)
+    elements.formatButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            elements.formatButtons.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            state.currentFormat = btn.dataset.format;
+            state.visibleMixes = 6;
+            renderMixes();
+        });
+    });
+
+    // Sort Selector
+    if (elements.sortSelect) {
+        elements.sortSelect.addEventListener('change', (e) => {
+            state.currentSort = e.target.value;
+            state.visibleMixes = 6;
+            renderMixes();
+        });
+    }
 }
 
 // ===================================
@@ -455,7 +539,7 @@ function playTrack(index) {
 
     // Update player info
     elements.playerTitle.textContent = mix.title;
-    elements.playerGenre.textContent = mix.genre.charAt(0).toUpperCase() + mix.genre.slice(1);
+    elements.playerGenre.textContent = mix.description;
     elements.playerArtwork.querySelector('img').src = mix.artwork;
     elements.playerArtwork.querySelector('img').classList.remove('hidden');
     elements.fullTrackLink.href = mix.fullLink;
