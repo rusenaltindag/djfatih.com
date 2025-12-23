@@ -2,21 +2,34 @@
     <!-- Background circle -->
     <circle cx="32" cy="32" r="30" fill="#1E1A38"/>
     
-    <!-- Headset -->
-    <g transform="translate(32, 36)">
-        <!-- Headband -->
-        <path d="M-20 4 C-20 -18, 20 -18, 20 4" stroke="#a78bfa" stroke-width="4" stroke-linecap="round" fill="none"/>
-        
-        <!-- Left ear cup -->
-        <g transform="translate(-22, 4)">
-            <rect x="-5" y="-8" width="10" height="20" rx="5" fill="#5B21B6"/>
-            <circle cx="0" cy="2" r="2" fill="#a78bfa"/>
-        </g>
-        
-        <!-- Right ear cup -->
-        <g transform="translate(22, 4)">
-            <rect x="-5" y="-8" width="10" height="20" rx="5" fill="#5B21B6"/>
-            <circle cx="0" cy="2" r="2" fill="#a78bfa"/>
-        </g>
+    <!-- Butterfly -->
+    <g transform="translate(32, 32)">
+        <!-- Left upper wing -->
+        <ellipse cx="-12" cy="-8" rx="10" ry="12" fill="url(#wingGradient)" transform="rotate(-15)"/>
+        <!-- Right upper wing -->
+        <ellipse cx="12" cy="-8" rx="10" ry="12" fill="url(#wingGradient)" transform="rotate(15)"/>
+        <!-- Left lower wing -->
+        <ellipse cx="-10" cy="6" rx="7" ry="9" fill="url(#wingGradientLight)" transform="rotate(-10)"/>
+        <!-- Right lower wing -->
+        <ellipse cx="10" cy="6" rx="7" ry="9" fill="url(#wingGradientLight)" transform="rotate(10)"/>
+        <!-- Body -->
+        <ellipse cx="0" cy="0" rx="2.5" ry="14" fill="#6B21A8"/>
+        <!-- Antennae -->
+        <path d="M-1 -14 Q-3 -18, -5 -17" stroke="#6B21A8" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+        <path d="M1 -14 Q3 -18, 5 -17" stroke="#6B21A8" stroke-width="1.5" fill="none" stroke-linecap="round"/>
     </g>
+    
+    <!-- Gradients -->
+    <defs>
+        <linearGradient id="wingGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#D8B4FE"/>
+            <stop offset="50%" stop-color="#C084FC"/>
+            <stop offset="100%" stop-color="#A855F7"/>
+        </linearGradient>
+        <linearGradient id="wingGradientLight" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#E9D5FF"/>
+            <stop offset="50%" stop-color="#D8B4FE"/>
+            <stop offset="100%" stop-color="#C084FC"/>
+        </linearGradient>
+    </defs>
 </svg>

@@ -172,11 +172,15 @@ body {
    Navigation
    =================================== */
 #navbar {
-    background: transparent;
+    background: linear-gradient(to bottom, rgba(5, 5, 5, 0.7), transparent);
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    transition: background 0.3s ease;
 }
 
 #navbar.scrolled {
-    background: rgba(5, 5, 5, 0.9);
+    background: rgba(5, 5, 5, 0.95) !important;
+    -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
