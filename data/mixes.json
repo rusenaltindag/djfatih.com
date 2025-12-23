@@ -228,7 +228,8 @@
             "artwork": "assets/mixes/mix-23-2017-hiphop-rnb-party-mix.jpg",
             "previewUrl": "mp3/preview-23-hiphop-2017.mp3",
             "fullLink": "https://www.youtube.com/watch?v=RTj4UybW4a8",
-            "description": "2017 HipHop RnB Party Mix | DJ Fatih – Best Club Vibes"
+            "description": "2017 HipHop RnB Party Mix | DJ Fatih – Best Club Vibes",
+            "format": "set"
         },
         {
             "id": 24,
@@ -238,7 +239,8 @@
             "artwork": "assets/mixes/mix-24-2015-hiphop-rnb-party-mix.jpg",
             "previewUrl": "mp3/preview-24-hiphop-2015.mp3",
             "fullLink": "https://www.youtube.com/watch?v=Uf53tVxCUB4",
-            "description": "2015 HipHop RnB Party Mix – DJ Fatih (Live Session)"
+            "description": "2015 HipHop RnB Party Mix – DJ Fatih (Live Session)",
+            "format": "set"
         },
         {
             "id": 25,
@@ -368,7 +370,8 @@
             "artwork": "assets/mixes/mix-37-hiphop-rnb-2016-party-mix.jpg",
             "previewUrl": "mp3/preview-37-hiphop-2016.mp3",
             "fullLink": "https://www.youtube.com/watch?v=xEwZEwxuKDY",
-            "description": "HipHop RnB 2016 Party Mix – DJ Fatih"
+            "description": "HipHop RnB 2016 Party Mix – DJ Fatih",
+            "format": "set"
         },
         {
             "id": 38,
@@ -378,7 +381,8 @@
             "artwork": "assets/mixes/mix-38-türkçe-pop-akustik-mix-part-2.jpg",
             "previewUrl": "mp3/preview-38-turkce-pop-akustik-2.mp3",
             "fullLink": "https://www.youtube.com/watch?v=UNvZLMMuPDI",
-            "description": "Türkçe Pop Akustik Mix Part 2 | DJ Fatih"
+            "description": "Türkçe Pop Akustik Mix Part 2 | DJ Fatih",
+            "format": "set"
         },
         {
             "id": 39,
@@ -388,7 +392,8 @@
             "artwork": "assets/mixes/mix-39-türkçe-pop-akustik-2014.jpg",
             "previewUrl": "mp3/preview-39-turkce-pop-akustik-2014.mp3",
             "fullLink": "https://www.youtube.com/watch?v=m1aXlI5_AFE",
-            "description": "Türkçe Pop Akustik 2014 by DJ Fatih"
+            "description": "Türkçe Pop Akustik 2014 by DJ Fatih",
+            "format": "set"
         },
         {
             "id": 40,
@@ -398,7 +403,8 @@
             "artwork": "assets/mixes/mix-40-türkçe-pop-yeni-remixler-2013-.jpg",
             "previewUrl": "mp3/preview-40-turkce-pop-2013-2014.mp3",
             "fullLink": "https://www.youtube.com/watch?v=SqvH19Mz7pk",
-            "description": "Türkçe Pop Yeni Remixler 2013-2014 by DJ Fatih"
+            "description": "Türkçe Pop Yeni Remixler 2013-2014 by DJ Fatih",
+            "format": "set"
         },
         {
             "id": 41,
@@ -408,7 +414,8 @@
             "artwork": "assets/mixes/mix-41-türkçe-pop-remix-2013-2014.jpg",
             "previewUrl": "mp3/preview-41-turkce-pop-remix-2013.mp3",
             "fullLink": "https://www.youtube.com/watch?v=sQCphoqkYws",
-            "description": "Türkce POP Remix by Dj Fatih From Istanbul 2013-2014"
+            "description": "Türkce POP Remix by Dj Fatih From Istanbul 2013-2014",
+            "format": "set"
         },
         {
             "id": 42,
@@ -418,7 +425,8 @@
             "artwork": "assets/mixes/mix-42-türkçe-pop-remix-mayıs-2013.jpg",
             "previewUrl": "mp3/preview-42-turkce-pop-mayis-2013.mp3",
             "fullLink": "https://www.youtube.com/watch?v=XqNo-ZT9fyQ",
-            "description": "2013 Mayıs Türkce POP Remix by Dj Fatih From Istanbul"
+            "description": "2013 Mayıs Türkce POP Remix by Dj Fatih From Istanbul",
+            "format": "set"
         },
         {
             "id": 43,
@@ -428,7 +436,8 @@
             "artwork": "assets/mixes/mix-43-türkçe-pop-mix-2013.jpg",
             "previewUrl": "mp3/preview-43-turkce-pop-mix-2013.mp3",
             "fullLink": "https://www.youtube.com/watch?v=5-WwniB7oVY",
-            "description": "Dj Fatih From Istanbul - Türkçe Pop Mix 2013"
+            "description": "Dj Fatih From Istanbul - Türkçe Pop Mix 2013",
+            "format": "set"
         },
         {
             "id": 44,
@@ -438,7 +447,8 @@
             "artwork": "assets/mixes/mix-44-nostalji-remixleri.jpg",
             "previewUrl": "mp3/preview-44-nostalji-remixleri.mp3",
             "fullLink": "https://www.youtube.com/watch?v=4OOdPafJHbg",
-            "description": "Nostalji Remixleri by Dj Fatih From Istanbul"
+            "description": "Nostalji Remixleri by Dj Fatih From Istanbul",
+            "format": "set"
         }
     ]
 }

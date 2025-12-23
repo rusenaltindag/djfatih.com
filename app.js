@@ -87,10 +87,9 @@ async function loadData() {
 
         // Pre-process data
         mixesData.forEach(mix => {
-            // Determine format
-            const durationParts = mix.duration.split(':');
-            const minutes = parseInt(durationParts[0]);
-            mix._format = minutes >= 10 ? 'set' : 'track';
+            // Use explicit format if provided, otherwise default to 'track'
+            // Sets should be explicitly marked in the JSON with "format": "set"
+            mix._format = mix.format || 'track';
 
             // Extract year
             const yearMatch = (mix.title + " " + mix.description).match(/(?:20|19)\d{2}/);
